@@ -8,7 +8,25 @@ const home = () => {
   homepage.classList.add('homepage');
 
   const header = document.createElement('header');
-  header.textContent = 'Nane International';
+
+  const headerButtons = document.createElement('div');
+  headerButtons.classList.add('headerButtons');
+  const menuButton = document.createElement('button');
+  menuButton.textContent = 'Menu';
+  const homeButton = document.createElement('button');
+  homeButton.textContent = 'Home';
+  const contactButton = document.createElement('button');
+  contactButton.textContent = 'Contact';
+  headerButtons.appendChild(menuButton);
+  headerButtons.appendChild(homeButton);
+  headerButtons.appendChild(contactButton);
+
+  header.appendChild(headerButtons);
+
+  const headerText = document.createElement('headerText');
+  headerText.classList.add('headerText');
+  headerText.textContent = 'Nane International';
+  header.appendChild(headerText);
   homepage.appendChild(header);
 
   const restaurantImage = document.createElement('div');
@@ -42,10 +60,10 @@ const home = () => {
   textHomepage5.textContent = "So come join us at 'Nane International' for an unforgettable dining experience that will leave you questioning everything you thought you knew about food and physics.";
   textHomepage.appendChild(textHomepage5);
 
-  textHomepage6.textContent = "Sincerely,";
+  textHomepage6.textContent = 'Sincerely,';
   textHomepage.appendChild(textHomepage6);
 
-  textHomepage7.textContent = "The Management";
+  textHomepage7.textContent = 'The Management';
   textHomepage.appendChild(textHomepage7);
 
   homepage.appendChild(textHomepage);

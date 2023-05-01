@@ -14,7 +14,7 @@ body {
 
 .homepage {
   display: grid;
-  grid-template-rows: 1fr 2fr 3fr 2fr;
+  grid-template-rows: 2fr 3fr 2fr;
   height: 100vh;
   width: 100vw;
   justify-content: center;
@@ -24,23 +24,74 @@ body {
 }
 
 header {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr;
+  grid-row: 1 / 2;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.headerButtons {
+  justify-self: center;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+
+button {
+  background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+button:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.headerText {
   font-style: italic;
   font-size: 4rem;
   grid-row: 2 / 3;
+  grid-column: 1 / 4;
+  display: flex;
   justify-self: center;
+  text-shadow: 3px 3px 20px brown,
+    -2px 1px 30px #ff99cc;
 }
 
 .restaurantImage {
   background: url('./restaurant.jpg');
   background-size: 100% 100%;
-  grid-row: 3 / 4;
-  width: 95%;
-  height: 20rem;
+  grid-row: 2 / 3;
+  width: 85%;
+  height: 25rem;
   justify-self: center;
 }
 
 .textHomepage {
-  grid-row: 4 / 5;
+  grid-row: 3 / 4;
   display: flex;
   flex-direction: column;
   justify-content: center;
