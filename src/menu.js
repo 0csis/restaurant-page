@@ -1,7 +1,7 @@
 import './style.css';
 import Burrito from './burrito.png';
-import Sushi from './sushi.jpg';
-import Salad from './salad.jpg';
+import Sushi from './sushi.png';
+import Salad from './salad.png';
 
 const menu = () => {
   const content = document.querySelector('#content');
@@ -59,8 +59,34 @@ const menu = () => {
   sushiDescription.appendChild(sushiDescription2);
   sushi.appendChild(sushiDescription);
 
+  const burrito = document.createElement('div');
+  burrito.classList.add('burrito');
+
+  const burritoImage = document.createElement('div');
+  burritoImage.classList.add('burritoImage');
+  const burritoPic = new Image();
+  burritoPic.src = Burrito;
+  burritoImage.appendChild = burritoPic;
+  burrito.appendChild(burritoImage);
+
+  const burritoTitle = document.createElement('div');
+  burritoTitle.classList.add('burritoTitle');
+  burritoTitle.textContent = "The Backwards Burrito";
+  burrito.appendChild(burritoTitle);
+
+  const burritoDescription = document.createElement('ul');
+  burritoDescription.classList.add('burritoDescription');
+  const burritoDescription1 = document.createElement('li');
+  const burritoDescription2 = document.createElement('li');
+  burritoDescription1.textContent = "A burrito with its filling on the outside and the tortilla wrapped around it.";
+  burritoDescription2.textContent = "Ingredients: Flour tortilla, refried beans, sliced avocado, diced tomato, chopped cilantro, sliced jalapenos, lime wedges.";
+  burritoDescription.appendChild(burritoDescription1);
+  burritoDescription.appendChild(burritoDescription2);
+  burrito.appendChild(burritoDescription);
+
   backgroundMenu.appendChild(salad);
   backgroundMenu.appendChild(sushi);
+  backgroundMenu.appendChild(burrito);
 
   content.appendChild(backgroundMenu);
 };

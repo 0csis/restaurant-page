@@ -104,6 +104,7 @@ button:active {
   --color: white;
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   outline: var(--b) solid white;
+  border-radius: 0.2rem;
 }
 
 .textHomepage {
@@ -126,6 +127,7 @@ button:active {
   color: white;
   width: 60vw;
   height: 70vh;
+  border-radius: 0.2rem;
 }
 
 .direction,
@@ -157,29 +159,45 @@ button:active {
 .saladDescription,
 .saladTitle,
 .sushiDescription,
-.sushiTitle {
+.sushiTitle,
+.burritoDescription,
+.burritoTitle {
   margin-left: 1rem;
 }
 
 .saladImage,
-.sushiImage {
-  background: url('./salad.jpg');
+.sushiImage,
+.burritoImage {
+  background: url('./salad.png');
+  background-repeat:no-repeat;
+  background-position: center center;
   background-size: 100% 100%;
   height: 20rem;
 }
 
 .sushi,
-.salad {
+.salad,
+.burrito {
   margin-bottom: 2rem;
   background: rgba(255, 255, 255, 0.05);
+  border-bottom: solid 0.1rem rgba(255, 255, 255, 0.5);
 }
 
 .sushiImage {
-  background: url('./sushi.jpg');
+  background: url('./sushi.png');
+  background-repeat:no-repeat;
+  background-position: center center;
+}
+
+.burritoImage {
+  background: url('./burrito.png');
+  background-repeat:no-repeat;
+  background-position: center center;
 }
 
 .saladTitle,
-.sushiTitle {
+.sushiTitle,
+.burritoTitle {
   font-weight: bold;
   font-size: 1.5rem;
 }
