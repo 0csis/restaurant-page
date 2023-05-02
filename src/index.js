@@ -1,6 +1,7 @@
 import { headerButtons } from './headerButtons';
 import { home } from './home';
 import { contact } from './contact';
+import { menu } from './menu';
 
 headerButtons();
 home();
@@ -15,13 +16,11 @@ buttons.forEach((btn) => {
       content.removeChild(secondChild);
     }
     if (btn.className == 'contactButton') {
-      console.log('contact');
       contact();
     } else if (btn.className == 'homeButton') {
-      console.log('home');
       home();
     } else if (btn.className == 'menuButton') {
-      console.log('menu');
+      menu();
     }
   });
 });

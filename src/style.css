@@ -118,7 +118,8 @@ button:active {
   justify-self: center;
 }
 
-.backgroundContact {
+.backgroundContact,
+.backgroundMenu {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 2.9);
   margin-top: 5rem;
@@ -151,4 +152,24 @@ button:active {
   background-size: 100% 100%;
   margin-top: 3rem;
   height: 70%;
+}
+
+.saladDescription,
+.saladTitle {
+  margin-left: 1rem;
+}
+
+.saladImage {
+  background: url('./salad.jpg');
+  background-size: 100% 100%;
+  height: 20rem;
+}
+
+.saladTitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.backgroundMenu {
+  height: fit-content;
 }
