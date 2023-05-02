@@ -1,6 +1,8 @@
+import { headerButtons } from './headerButtons';
 import { home } from './home';
 import { contact } from './contact';
 
+headerButtons();
 home();
 
 const content = document.querySelector('#content');
