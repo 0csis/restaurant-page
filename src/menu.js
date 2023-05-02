@@ -34,7 +34,34 @@ const menu = () => {
   saladDescription.appendChild(saladDescription2);
   salad.appendChild(saladDescription);
 
+  const sushi = document.createElement('div');
+  sushi.classList.add('sushi');
+
+  const sushiImage = document.createElement('div');
+  sushiImage.classList.add('sushiImage');
+  const sushiPic = new Image();
+  sushiPic.src = Sushi;
+  sushiImage.appendChild = sushiPic;
+  sushi.appendChild(sushiImage);
+
+  const sushiTitle = document.createElement('div');
+  sushiTitle.classList.add('sushiTitle');
+  sushiTitle.textContent = 'The Inside-Out Sushi Roll';
+  sushi.appendChild(sushiTitle);
+
+  const sushiDescription = document.createElement('ul');
+  sushiDescription.classList.add('sushiDescription');
+  const sushiDescription1 = document.createElement('li');
+  const sushiDescription2 = document.createElement('li');
+  sushiDescription1.textContent = 'A sushi roll with a playful twist, where the rice and the nori seaweed are reversed in order.';
+  sushiDescription2.textContent = 'Ingredients: Sushi rice, avocado, cucumber, carrot, bell pepper, alfalfa sprouts, wasabi, soy sauce.';
+  sushiDescription.appendChild(sushiDescription1);
+  sushiDescription.appendChild(sushiDescription2);
+  sushi.appendChild(sushiDescription);
+
   backgroundMenu.appendChild(salad);
+  backgroundMenu.appendChild(sushi);
+
   content.appendChild(backgroundMenu);
 };
 
